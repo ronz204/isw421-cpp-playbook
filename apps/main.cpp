@@ -1,4 +1,6 @@
+#include <vector>
 #include <iostream>
+#include <algorithm>
 
 // Function prototype
 int sum(int alpha, int beta);
@@ -32,6 +34,16 @@ int main() {
     std::cout << "Index: " << index << std::endl;
     index++;
   } while (index < 10);
+
+
+  std::vector<int> numbers = {1, 2, 3, 4, 5};
+  int factor = 10;
+
+  auto multiply = [factor](int num) {
+    std::cout << num * factor << " ";
+  };
+
+  std::for_each(numbers.begin(), numbers.end(), multiply);
 
   return 0;
 }
