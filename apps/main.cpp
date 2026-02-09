@@ -24,5 +24,11 @@ int main() {
       break;
   }
 
+  int index = 5;
+  do {
+    std::cout << "Index: " << index << std::endl;
+    index++;
+  } while (index < 10);
+
   return 0;
 }
