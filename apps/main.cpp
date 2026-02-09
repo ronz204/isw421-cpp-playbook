@@ -1,10 +1,13 @@
 #include <iostream>
 
+// Function prototype
+int sum(int alpha, int beta);
+
 int main() {
   int alpha = 5;
   int beta = 10;
 
-  int result = alpha + beta;
+  int result = sum(alpha, beta);
   std::cout << "The result of adding alpha and beta is: " << result << std::endl;
 
 
@@ -31,4 +34,9 @@ int main() {
   } while (index < 10);
 
   return 0;
+}
+
+// Function definition
+int sum(int alpha, int beta) {
+  return alpha + beta;
 }
