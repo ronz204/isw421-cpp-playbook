@@ -1,10 +1,12 @@
 # Source Layer: Business Logic Library
 # Automatically includes all .cpp files from subdirectories
 
-file(GLOB_RECURSE BASES "${CMAKE_CURRENT_SOURCE_DIR}/Bases/*.cpp")
+file(GLOB_RECURSE BASES "${CMAKE_CURRENT_SOURCE_DIR}/bases/*.cpp")
 
 if(BASES)
   add_library(bases STATIC ${BASES})
+  add_library(Bases::bases ALIAS bases)
+  target_include_directories(bases PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
   list(LENGTH BASES SOURCE_COUNT)
   message(STATUS "Library 'bases' created with ${SOURCE_COUNT} source file(s)")
