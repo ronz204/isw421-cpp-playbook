@@ -4,6 +4,12 @@
 namespace references
 {
   void demo();
+
+  struct User 
+  {
+    std::string name;
+    std::string email;
+  };
 }
 
 #endif
