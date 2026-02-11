@@ -1,5 +1,6 @@
 #include "references.h"
 #include <iostream>
+#include <vector>
 
 namespace references
 {
@@ -26,5 +27,12 @@ namespace references
 
     User user{"Alice", "tester@example.com"};
     display(user);
+
+
+    std::vector<std::string> names = {"Alice", "Bob", "Charlie"};
+    for (const auto& name : names)
+    {
+      std::cout << name << std::endl;
+    }
   }
 }
